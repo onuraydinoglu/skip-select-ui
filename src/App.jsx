@@ -1,7 +1,8 @@
 import "./App.css";
+import SkipSelection from "./pages/SkipSelection";
 
 function App() {
-  return <h2>Businiess Skip Hire</h2>;
+  return <SkipSelection />;
 }
 
 export default App;
