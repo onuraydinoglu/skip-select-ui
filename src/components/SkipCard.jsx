@@ -1,7 +1,10 @@
 import { ArrowRight, Check, AlertTriangle, X } from "lucide-react";
+import { getSkipImageUrl } from "../utils/getSkipImageUrl";
+// import { isNew } from "../utils/isNew";
+import { shouldShowNew } from "../utils/shouldShowNew";
 
 const SkipCard = ({ data, selected, onSelect }) => {
-  const imageUrl = `/images/${data.size}-yarder-skip.jpg`;
+  const imageUrl = getSkipImageUrl(data.size);
 
   return (
     <div
@@ -9,6 +12,12 @@ const SkipCard = ({ data, selected, onSelect }) => {
     ${selected ? "border-blue-700" : "border-blue-300"} hover:border-blue-700`}
       onClick={() => onSelect(data)}
     >
+      {shouldShowNew(data.created_at, data.id) && (
+        <span className="absolute top-2 left-2 bg-green-600 text-white text-xs px-2 py-1 rounded shadow-md">
+          New
+        </span>
+      )}
+
       <div className="flex flex-col pl-2">
         <figure className="w-40 h-32">
           <img
@@ -25,7 +34,7 @@ const SkipCard = ({ data, selected, onSelect }) => {
         <div className="flex items-center justify-between">
           <h2 className="card-title badge badge-info rounded">{data.size} Yards</h2>
 
-          <div className="mt-2 text-xs text-white flex gap-2">
+          <div className="text-xs text-white flex gap-2">
             <span
               className={`badge flex items-center gap-1 px-2 py-1 rounded ${
                 data.allowed_on_road

@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 
-import SkipCard from "../components/SkipCard";
 import Stepper from "../components/Stepper";
 import Title from "../components/Title";
 import Subtitle from "../components/Subtitle";
+
+import SkipCard from "../components/SkipCard";
+import SkipDetail from "../components/SkipDetail";
 
 import stepData from "../shared/data/stepData";
 import { fetchSkips } from "../services/skipService";
@@ -40,8 +42,9 @@ const SkipSelection = () => {
             />
           ))}
         </div>
+
         <div className="lg:w-1/4">
-          <div className="border-b-2 rounded p-4 text-white bg-[#1E1E1E]">Detail</div>
+          <SkipDetail data={selected} />
         </div>
       </div>
     </div>
