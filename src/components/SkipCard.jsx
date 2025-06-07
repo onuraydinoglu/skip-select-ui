@@ -51,14 +51,9 @@ const SkipCard = ({ data, selected, onSelect }) => {
       </div>
 
       <div className="card-body text-white">
-        <div className="flex items-center justify-between">
-          <h2 className="xl:card-title badge badge-info rounded">{data.size} Yards</h2>
-          <div>
-            <p className="text-xl text-blue-700 px-2">£{data.price_before_vat}</p>
-          </div>
-        </div>
-        <p className="text-xl">{data.size} Yard Skip</p>
+        <p className="card-title">{data.size} Yard Skip</p>
         <p className="text-gray-400 text-sm">{data.hire_period_days} day hire period</p>
+        <p className="text-xl text-blue-700">£{data.price_before_vat}</p>
         <div className="card-actions justify-end">
           <button
             className={`btn rounded flex items-center gap-2 ${
