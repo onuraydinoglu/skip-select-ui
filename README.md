@@ -7,7 +7,9 @@ This is a React-based front-end UI redesign project created as part of a technic
 ## 🌐 Live Demo
 
 👉 Netlify: [https://stellar-ganache-f796b4.netlify.app](https://stellar-ganache-f796b4.netlify.app)
+
 👉 Sandbox: [https://kzjckm-5173.csb.app/](https://kzjckm-5173.csb.app/)
+
 ---
 
 ## 🛠️ Tech Stack
