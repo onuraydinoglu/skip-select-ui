@@ -1,7 +1,7 @@
 const Stepper = ({ steps, currentStep }) => {
   return (
     <div className="overflow-x-auto">
-      <div className="flex items-start justify-start md:justify-center bg-black py-6 px-4 min-w-max">
+      <div className="flex items-start justify-start md:justify-center bg-black py-8 px-4 min-w-max">
         {steps.map((step, index) => {
           const Icon = step.icon;
           const isCompleted = index < currentStep;

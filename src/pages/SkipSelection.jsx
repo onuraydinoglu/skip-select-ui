@@ -23,7 +23,7 @@ const SkipSelection = () => {
   }, []);
 
   return (
-    <div className="px-4 max-w-[1440px] mx-auto">
+    <div className="px-4 max-w-[1440px] mx-auto mb-20">
       <Stepper steps={stepData} currentStep={2} />
 
       <div className="text-center my-10">
@@ -32,7 +32,7 @@ const SkipSelection = () => {
       </div>
 
       <div className="flex flex-col lg:flex-row gap-6">
-        <div className="lg:w-3/4 grid gap-4 lg:grid-cols-2">
+        <div className="lg:w-3/4 grid gap-4 md:grid-cols-2">
           {skips.map((item) => (
             <SkipCard
               key={item.id}
