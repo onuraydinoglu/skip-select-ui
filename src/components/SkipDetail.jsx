@@ -1,3 +1,4 @@
+import { ArrowRight } from "lucide-react";
 import { getSkipImageUrl } from "../utils/getSkipImageUrl";
 // import { isNew } from "../utils/isNew";
 import { shouldShowNew } from "../utils/shouldShowNew";
@@ -100,7 +101,9 @@ const SkipDetail = ({ data }) => {
 
         <div className="flex justify-end gap-4 pt-4">
           <button className="btn btn-primary rounded">Back</button>
-          <button className="btn btn-info rounded">Continue</button>
+          <button className="btn btn-info rounded">
+            Continue <ArrowRight size={18} />
+          </button>
         </div>
       </div>
     </div>
